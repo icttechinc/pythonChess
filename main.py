@@ -28,22 +28,85 @@ if Start == 1:
     print("   A   B   C   D   E   F   G   H  ")
     #The timer class and sound effect class will be added later
     #Special effects will also be added later
-    class Board(object):
-        def __init__(self,New_Board,Check,Mate,Valid_Move,Is_Checked):
-    class Pieces:
-        def __init(self,Captured,Capturing,Is_Turn,Is_Available):
-        class Rook(object):
-                def __init(self,Rmove):
-        class Knight(object):
-                def __init(self,Nmove):
-        class Pawn(object):
-                def __init(self,Pmove):
-        class Bishop(object):
-                def __init(self,Bmove):
-        class Queen(object):
-                def __init(self,Qmove):
-        class King(object):
-                def __init(self,Kmove):
+    class Board(object):                                                                #Board Code
+        def __init__(self,nb,c,m,vm,ic):
+    	   	self.New_Board = nb
+            self.Check = c
+            self.Mate = m
+            self.Valid_Move = vm
+            self.Is_Checked = ic
+    class Pieces:                                                                       #Pieces General Code
+        def __init__ (self,c,t,it,ia):
+            self.captured = c
+            self.take = t
+            self.Is_Turn = it
+            self.Is_Available = ia
+        class Rook(object):                                                             #Rook Code
+                def __init__ (self,c,x,y):
+                    self.color = c
+                    self.alive = True
+                    self.firstMove = True
+                    self.x = x
+                    self.y = y
+               def move(self, dirx, diry):
+                    if validMove(dirx,diry):
+                        self.x= dirx
+                        self.y= diry
+        class Knight(object):                                                          #Knight Code
+                def __init__ (self,c,x,y):
+                    self.color = c
+                    self.alive = True
+                    self.firstMove = True
+                    self.x = x
+                    self.y = y
+               def move(self, dirx, diry):
+                    if validMove(dirx,diry):
+                        self.x= dirx
+                        self.y= diry
+        class Pawn(object):                                                             #Pawn Code
+                def __init__ (self,c,x,y):
+                    self.color = c
+                    self.alive = True
+                    self.firstMove = True
+                    self.x = x
+                    self.y = y
+               def move(self, dirx, diry):
+                    if validMove(dirx,diry):
+                        self.x= dirx
+                        self.y= diry
+        class Bishop(object):                                                           #Bishop Code
+                def __init__ (self,c,x,y):
+                    self.color = c
+                    self.alive = True
+                    self.firstMove = True
+                    self.x = x
+                    self.y = y
+               def move(self, dirx, diry):
+                    if validMove(dirx,diry):
+                        self.x= dirx
+                        self.y= diry
+        class Queen(object):                                                            #Queen Code
+                def __init__ (self,c,x,y):
+                    self.color = c
+                    self.alive = True
+                    self.firstMove = True
+                    self.x = x
+                    self.y = y
+               def move(self, dirx, diry):
+                    if validMove(dirx,diry):
+                        self.x= dirx
+                        self.y= diry
+        class King(object):                                                             #King Code
+                def __init__ (self,c,x,y):
+                    self.color = c
+                    self.alive = True
+                    self.firstMove = True
+                    self.x = x
+                    self.y = y
+               def move(self, dirx, diry):
+                    if validMove(dirx,diry):
+                        self.x= dirx
+                        self.y= diry
 elif Start == 2:
     print("Please restart program when ready")
 else:
