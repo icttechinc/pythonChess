@@ -26,8 +26,6 @@ if Start == 1:
     print("1| R | N | B | Q | K | B | N | R |")
     print(" |___|___|___|___|___|___|___|___|")
     print("   A   B   C   D   E   F   G   H  ")
-    #The timer class and sound effect class will be added later
-    #Special effects will also be added later
     class Board(object):                                                                #Board Code
         def __init__(self,nb,c,m,vm,ic):
     	   	self.New_Board = nb
@@ -36,11 +34,19 @@ if Start == 1:
             self.Valid_Move = vm
             self.Is_Checked = ic
     class Pieces:                                                                       #Pieces General Code
-        def __init__ (self,c,t,it,ia):
+        def __init__ (self,c,t,it,ia,b):
             self.captured = c
             self.take = t
             self.Is_Turn = it
             self.Is_Available = ia
+            self.block = b
+            if m = True:
+                ia = False
+                it = False
+                print("Game Over")
+            if c = True:
+                b = True
+                t = True
         class Rook(object):                                                             #Rook Code
                 def __init__ (self,c,x,y):
                     self.color = c
@@ -56,7 +62,6 @@ if Start == 1:
                 def __init__ (self,c,x,y):
                     self.color = c
                     self.alive = True
-                    self.firstMove = True
                     self.x = x
                     self.y = y
                def move(self, dirx, diry):
@@ -78,7 +83,6 @@ if Start == 1:
                 def __init__ (self,c,x,y):
                     self.color = c
                     self.alive = True
-                    self.firstMove = True
                     self.x = x
                     self.y = y
                def move(self, dirx, diry):
@@ -89,7 +93,6 @@ if Start == 1:
                 def __init__ (self,c,x,y):
                     self.color = c
                     self.alive = True
-                    self.firstMove = True
                     self.x = x
                     self.y = y
                def move(self, dirx, diry):
