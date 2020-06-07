@@ -1,52 +1,54 @@
 Start = int(input("Start chess game? Answer 1 for yes and 2 for no"))
 if Start == 1:
-    print("  ___ ___ ___ ___ ___ ___ ___ ___ ")
-    print(" |   |   |   |   |   |   |   |   |")
-    print("8| R | N | B | Q | K | B | N | R |")
-    print(" |___|___|___|___|___|___|___|___|")
-    print(" |   |   |   |   |   |   |   |   |")
-    print("7| P | P | P | P | P | P | P | P |")
-    print(" |___|___|___|___|___|___|___|___|")
-    print(" |   |   |   |   |   |   |   |   |")
-    print("6|   |   |   |   |   |   |   |   |")
-    print(" |___|___|___|___|___|___|___|___|")
-    print(" |   |   |   |   |   |   |   |   |")
-    print("5|   |   |   |   |   |   |   |   |")
-    print(" |___|___|___|___|___|___|___|___|")
-    print(" |   |   |   |   |   |   |   |   |")
-    print("4|   |   |   |   |   |   |   |   |")
-    print(" |___|___|___|___|___|___|___|___|")
-    print(" |   |   |   |   |   |   |   |   |")
-    print("3|   |   |   |   |   |   |   |   |")
-    print(" |___|___|___|___|___|___|___|___|")
-    print(" |   |   |   |   |   |   |   |   |")
-    print("2| P | P | P | P | P | P | P | P |")
-    print(" |___|___|___|___|___|___|___|___|")
-    print(" |   |   |   |   |   |   |   |   |")
-    print("1| R | N | B | Q | K | B | N | R |")
-    print(" |___|___|___|___|___|___|___|___|")
-    print("   A   B   C   D   E   F   G   H  ")
+    print("  _____ _____ _____ _____ _____ _____ _____ _____ ")
+    print(" |     |     |     |     |     |     |     |     |")
+    print("8|  R  |  N  |  B  |  Q  |  K  |  B  |  N  |  R  |")
+    print(" |_____|_____|_____|_____|_____|_____|_____|_____|")
+    print(" |     |     |     |     |     |     |     |     |")
+    print("7|  P  |  P  |  P  |  P  |  P  |  P  |  P  |  P  |")
+    print(" |_____|_____|_____|_____|_____|_____|_____|_____|")
+    print(" |     |     |     |     |     |     |     |     |")
+    print("6|     |     |     |     |     |     |     |     |")
+    print(" |_____|_____|_____|_____|_____|_____|_____|_____|")
+    print(" |     |     |     |     |     |     |     |     |")
+    print("5|     |     |     |     |     |     |     |     |")
+    print(" |_____|_____|_____|_____|_____|_____|_____|_____|")
+    print(" |     |     |     |     |     |     |     |     |")
+    print("4|     |     |     |     |     |     |     |     |")
+    print(" |_____|_____|_____|_____|_____|_____|_____|_____|")
+    print(" |     |     |     |     |     |     |     |     |")
+    print("3|     |     |     |     |     |     |     |     |")
+    print(" |_____|_____|_____|_____|_____|_____|_____|_____|")
+    print(" |     |     |     |     |     |     |     |     |")
+    print("7|  P  |  P  |  P  |  P  |  P  |  P  |  P  |  P  |")
+    print(" |_____|_____|_____|_____|_____|_____|_____|_____|")
+    print(" |     |     |     |     |     |     |     |     |")
+    print("8|  R  |  N  |  B  |  Q  |  K  |  B  |  N  |  R  |")
+    print(" |_____|_____|_____|_____|_____|_____|_____|_____|")
+    print("    A     B     C     D     E     F     G     H   ")
     class Board(object):                                                                #Board Code
         def __init__(self,nb,c,m,vm,ic):
-    	   	self.New_Board = nb
+    	    self.New_Board = nb
             self.Check = c
             self.Mate = m
             self.Valid_Move = vm
             self.Is_Checked = ic
     class Pieces:                                                                       #Pieces General Code
-        def __init__ (self,c,t,it,ia,b):
-            self.captured = c
+        def __init__ (self,ca,t,it,ia,b):
+            self.captured = ca
             self.take = t
             self.Is_Turn = it
             self.Is_Available = ia
             self.block = b
-            if m = True:
+            if m == True:
                 ia = False
                 it = False
                 print("Game Over")
-            if c = True:
-                b = True
-                t = True
+            if c == True:
+                if b == True:
+                    ia = True
+                if t == True:
+                    ia = True
         class Rook(object):                                                             #Rook Code
                 def __init__ (self,c,x,y):
                     self.color = c
