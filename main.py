@@ -25,7 +25,7 @@ if Start == 1:
     print(" |     |     |     |     |     |     |     |     |")
     print("8|  R  |  N  |  B  |  Q  |  K  |  B  |  N  |  R  |")
     print(" |_____|_____|_____|_____|_____|_____|_____|_____|")
-    print("    A     B     C     D     E     F     G     H   ")
+    print("    a     b     c     d     e     f     g     h   ")
     class Board(object):                                                                #Board Code
         def __init__(self,nb,c,m,vm,ic):
     	    self.New_Board = nb
