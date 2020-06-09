@@ -34,15 +34,20 @@ if Start == 1:
             self.Valid_Move = vm
             self.Is_Checked = ic
     class Pieces:                                                                       #Pieces General Code
-        def __init__ (self,ca,t,it,ia,b):
+        def __init__ (self,ca,t,it,ia,b, m):
             self.captured = ca
             self.take = t
             self.Is_Turn = it
             self.Is_Available = ia
             self.block = b
+            self.move = m
             if m == True:
                 ia = False
                 it = False
+                b = False
+                t = False
+                c = False
+                m = False
                 print("Game Over")
             if c == True:
                 if b == True:
