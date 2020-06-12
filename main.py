@@ -45,8 +45,8 @@ if Start == 1:
     class Board(object):                                                                #Board Code
         def __init__(self,nb,c,m,vm,ic):
     	    self.New_Board = nb
-            self.Check = c
-            self.Mate = m
+            self.Check = ch
+            self.Mate = ma
             self.Valid_Move = vm
             self.Is_Checked = ic
     class Pieces:                                                                       #Pieces General Code
@@ -57,15 +57,15 @@ if Start == 1:
             self.Is_Available = ia
             self.block = b
             self.move = m
-            if m == True:
+            if ma == True:
                 ia = False
                 it = False
                 b = False
                 t = False
-                c = False
+                ca = False
                 m = False
                 print("Game Over")
-            if c == True:
+            if ch == True:
                 if b == True:
                     ia = True
                 if t == True:
