@@ -43,32 +43,32 @@ if Start == 1:
     print(" |_____________|_____________|_____________|_____________|_____________|_____________|_____________|_____________|")
     print("       a              b             c             d             e             f             g             h       ")
     class Board(object):                                                                #Board Code
-        def __init__(self,nb,c,m,vm,ic):
+        def __init__(self,nb,ch,ma,vm,ic):
     	    self.New_Board = nb
             self.Check = ch
             self.Mate = ma
             self.Valid_Move = vm
             self.Is_Checked = ic
     class Pieces:                                                                       #Pieces General Code
-        def __init__ (self,ca,t,it,ia,b, m):
+        def __init__ (self,ca,ta,it,ia,bl,mo):
             self.captured = ca
-            self.take = t
+            self.take = ta
             self.Is_Turn = it
             self.Is_Available = ia
-            self.block = b
-            self.move = m
+            self.block = bl
+            self.move = mo
             if ma == True:
                 ia = False
                 it = False
-                b = False
-                t = False
+                bl = False
+                ta = False
                 ca = False
-                m = False
+                mo = False
                 print("Game Over")
             if ch == True:
-                if b == True:
+                if bl == True:
                     ia = True
-                if t == True:
+                if ta == True:
                     ia = True
         class Rook(object):                                                             #Rook Code
                 def __init__ (self,c,x,y):
